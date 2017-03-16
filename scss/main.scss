@@ -1,0 +1,100 @@
+@import 'mixin';
+@import 'wrapper';
+@import 'title';
+@import 'header';
+@import 'navigation';
+@import 'content';
+@import 'presentation';
+@import 'btn';
+@import 'digital';
+@import 'providing';
+@import 'comentaries';
+@import 'footer';
+
+h1,h2,h3,h4,h6 {
+	margin :0;
+	font-weight: 100;
+}
+form .ng-invalid-required.ng-dirty {
+    background-color: lightpink;
+}
+
+form .ng-invalid-email.ng-dirty {
+    background-color: red;
+}
+form .ng-invalid.ng-dirty {
+    background-color: red;
+}
+
+form .ng-valid.ng-dirty {
+    background-color: lightgreen;
+}
+.disableBtn {
+	background-color: grey;
+	cursor: wait;
+	&:hover{
+		background-color: grey;
+		color: black;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+hr{
+	margin: 0;
+	@include respond-to(mobile){
+		display: none;
+	}
+}
+.fa {
+	padding: 0 10px;
+	font-size: 20px;
+	transition: all .6s;
+}
+
+#burger{
+	color: white;
+	font-size: 35px;
+	padding: 10px;
+	display: none;
+	@include respond-to(smallMobile){
+		display: block;
+	}
+}
+img{
+	width: 100%;
+}
+table {
+	border: 1px solid black;
+	margin: 0 auto 10px;
+}
+td {
+	border: 1px solid black;
+	padding: 10px;
+}
+body {
+	font-family: 'arial';
+	font-weight: 100;
+	margin: 0;
+	color: #1e2a32;
+}
+
+.blue {
+	color: #3b9ce4;
+}
+
+.dark {
+	color: #bdbdbd;
+}
+
+.mainColor {
+	color: #d40808;
+}
+.headerIcon {
+	color: #d8dcde;
+}

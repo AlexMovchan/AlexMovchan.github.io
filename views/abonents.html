@@ -1,0 +1,30 @@
+<div  class='wall' ng-controller='abonentsCtrl'>
+	<table>
+		<tr>
+			<td><b>ID</b></td>
+			<td><b>NAME</b></td>
+			<td><b>SURNAME</b></td>
+			<td><b>EMAIL</b></td>
+			<td><b>PHONE</b></td>
+		</tr>
+		<tr ng-repeat='item in abonents.data'>
+			<td>{{item.id}}</td>
+		    <td>{{item.name}}</td>
+		    <td>{{item.surname}}</td>
+		    <td>{{item.email}}</td>
+		    <td>+{{item.phone}}</td>
+	    </tr>
+	</table>
+
+	<div class="post">
+	    <h2>Registration Form</h2>
+	    <form name="myForm" novalidate ng-submit="addAbonent(item)">
+		    <p><input name='username' type="text" placeholder="Input your NAME" required ng-model='item.name' ng-pattern="/^[a-zA-Z]{1,20}$/" width='30%'></p>
+		    <p><input name='surname' type="text" placeholder="Input your Surname" required ng-model='item.surname' ng-pattern="/^[a-zA-Z]{1,20}$/" width='30%'></p>
+		    <p><input name='email' type="email" placeholder="Input your Adress" required ng-model='item.email' width='30%'></p>
+		    <p><input name='phone' type="number" placeholder="Input your Phone" required ng-model='item.phone' ng-pattern="/^[0-9]{11}$/" width='30%'></p>
+		    <button type='submit' class='btn btn-form' ng-class='myForm.$invalid ? "disableBtn" : "enableBtn"' ng-disabled="myForm.$invalid">Submit</button>
+	    </form>
+	</div>
+	
+</div>

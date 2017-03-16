@@ -1,0 +1,23 @@
+@mixin respond-to($media) {
+    
+    @if $media==smallMobile {
+        @media only screen and (max-width: 560px) {
+            @content;   
+        }
+    }
+    @if $media==midMobile {
+        @media only screen and (max-width: 640px) {
+            @content;    
+        }
+    }
+    @if $media==mobile {
+        @media only screen and (max-width: 768px) {
+            @content;    
+        }
+    }
+    @if $media==tablets {
+        @media only screen and (max-width: 960px) {
+            @content;   
+        }
+    }
+}
